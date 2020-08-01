@@ -40,9 +40,9 @@ body {
   padding: $section-spacing;
 
   .site-title {
-    font-family: "Abril Fatface", serif;
+    font-family: $root-font-family;
     font-weight: normal;
-    font-size: $large-font-size;
+    font-size: $root-font-size;
     margin-top: 0;
     margin-bottom: $heading-spacing;
 
@@ -110,7 +110,7 @@ body {
 
   // Bigger title
   .site-title {
-    font-size: 3.25rem;
+    font-size: 1.25rem;
   }
 
   // Show secondary nav content + lead
@@ -162,7 +162,7 @@ body {
 
   #sidebar {
     .site-title {
-      font-size: 3.25rem;
+      font-size: 1.25rem;
       .back-arrow { display: none; }
     }
 
@@ -235,6 +235,7 @@ body {
 
 #sidebar .site-title {
   color: $sidebar-title-color;
+  font-size: 1.25rem;
   a { color: inherit; }
 }
 #sidebar nav {
@@ -245,17 +246,20 @@ body {
   flex-flow: column nowrap;
 }
 
-#sidebar-icon-links {
+/*#sidebar-icon-links {
   max-width: 100%;
   flex-flow: row wrap;
   justify-content: center;
   margin-top: 1rem;
 
+  visibility: hidden;
+
   @media (min-width: $large-breakpoint) {
     margin-left: -0.25em;
     justify-content: flex-start;
   }
-}
+
+}*/
 
 #sidebar nav > * {
   display: block;

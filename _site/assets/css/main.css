@@ -101,8 +101,9 @@ h4, h5, h6 {
   font-size: 1rem; }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /*visibility: hidden;*/ }
 
 strong {
   color: #303030; }
@@ -156,8 +157,9 @@ a[href^="#fnref:"] {
   font-size: 85%; }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300; }
+  font-size: 0.5rem;
+  font-weight: 100;
+  color: transparent; }
 
 a svg, .icon svg {
   height: 1em; }
@@ -496,11 +498,11 @@ body {
 
 #sidebar {
   flex: 0 0 auto;
-  padding: 2rem; }
+  padding: 3rem; }
   #sidebar .site-title {
-    font-family: "Abril Fatface", serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: normal;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0.5rem; }
     #sidebar .site-title .back-arrow {
@@ -512,12 +514,12 @@ body {
   flex-direction: column; }
   .container > .content {
     flex-grow: 1;
-    padding-bottom: 4rem; }
+    padding-bottom: 6rem; }
 
 .content {
   background: #fff;
   color: #515151;
-  padding: 2rem; }
+  padding: 3rem; }
 
 /* -----------------------------------------------------------
   Mobile view
@@ -528,7 +530,7 @@ body {
 .container > header {
   color: white;
   background: transparent;
-  margin: -1.5rem 2rem 2rem; }
+  margin: -2.5rem 3rem 3rem; }
   .container > header h1, .container > header h2 {
     color: inherit; }
     .container > header h1:last-child, .container > header h2:last-child {
@@ -540,7 +542,7 @@ body {
 .home #sidebar {
   text-align: center; }
   .home #sidebar .site-title {
-    font-size: 3.25rem; }
+    font-size: 1.25rem; }
   .home #sidebar header ~ *, .home #sidebar p.lead {
     display: block; }
   .home #sidebar header ~ nav {
@@ -564,13 +566,13 @@ body {
 
   /* Undo mobile CSS */
   #sidebar, .home #sidebar {
-    width: 18rem;
+    width: 12rem;
     text-align: left; }
     #sidebar > *:last-child, .home #sidebar > *:last-child {
       margin-bottom: 0; }
 
   #sidebar .site-title {
-    font-size: 3.25rem; }
+    font-size: 1.25rem; }
     #sidebar .site-title .back-arrow {
       display: none; }
   #sidebar p.lead, #sidebar header ~ * {
@@ -584,7 +586,7 @@ body {
   .container {
     background: #fff;
     color: #515151;
-    padding: 4rem 4rem 0;
+    padding: 6rem 6rem 0;
     height: 100vh; }
     .container > header {
       color: #313131;
@@ -613,7 +615,8 @@ body {
     font-weight: bold; }
 
 #sidebar .site-title {
-  color: white; }
+  color: white;
+  font-size: 1.25rem; }
   #sidebar .site-title a {
     color: inherit; }
 
@@ -623,16 +626,20 @@ body {
 #sidebar-nav-links {
   flex-flow: column nowrap; }
 
-#sidebar-icon-links {
+/*#sidebar-icon-links {
   max-width: 100%;
   flex-flow: row wrap;
   justify-content: center;
-  margin-top: 1rem; }
-  @media (min-width: 49rem) {
-    #sidebar-icon-links {
-      margin-left: -0.25em;
-      justify-content: flex-start; } }
+  margin-top: 1rem;
 
+  visibility: hidden;
+
+  @media (min-width: $large-breakpoint) {
+    margin-left: -0.25em;
+    justify-content: flex-start;
+  }
+
+}*/
 #sidebar nav > * {
   display: block;
   line-height: 1.75; }
@@ -648,6 +655,9 @@ body {
   Set $sidebar-stick variable to affix sidebar contents to the
   bottom of the sidebar in tablets and up.
 ----------------------------------------------------------- */
+@media (min-width: 49rem) {
+  body {
+    align-items: flex-end; } }
 /* -----------------------------------------------------------
   Reverse layout
 
@@ -671,9 +681,9 @@ body {
     opacity: .5; }
 
 article + *, .post-body ~ section {
-  padding-top: 2rem;
+  padding-top: 3rem;
   border-top: 1px solid #e5e5e5;
-  margin-top: 2rem; }
+  margin-top: 3rem; }
   article + * > h2:first-child, article + * > h3:first-child, .post-body ~ section > h2:first-child, .post-body ~ section > h3:first-child {
     margin-top: 0; }
 
@@ -737,7 +747,7 @@ button.disqus-load {
   of each page.
 */
 .pagination {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #ccc;
   text-align: center; }
   .pagination > a {
@@ -747,23 +757,23 @@ button.disqus-load {
     border-radius: 300px;
     border-width: 1px;
     width: 60%;
-    max-width: 18rem;
+    max-width: 12rem;
     background: #fff;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16); }
     .pagination > a:hover {
       background-color: #e5e5e5; }
 
 * + .pagination {
-  margin-top: 2rem; }
+  margin-top: 3rem; }
 
 .content .pagination:first-child {
-  margin-top: -4rem; }
+  margin-top: -6rem; }
 
 .index #sidebar {
-  padding-bottom: calc(2rem + 1em); }
+  padding-bottom: calc(3rem + 1em); }
 
 .home.index #sidebar {
-  padding-bottom: 2rem; }
+  padding-bottom: 3rem; }
 
 @media (min-width: 49rem) {
   .pagination > a {
@@ -774,12 +784,12 @@ button.disqus-load {
   .content .pagination:first-child {
     margin-top: 0; }
     .content .pagination:first-child + * {
-      padding-top: 2rem;
+      padding-top: 3rem;
       border-top: 1px solid #e5e5e5;
-      margin-top: 2rem; }
+      margin-top: 3rem; }
 
   .index #sidebar {
-    padding-bottom: 2rem; } }
+    padding-bottom: 3rem; } }
 .message {
   margin-bottom: 1rem;
   padding: 1rem;

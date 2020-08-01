@@ -30,8 +30,9 @@ h4, h5, h6 {
 }
 
 p {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  /*visibility: hidden;*/
 }
 
 strong {
@@ -112,8 +113,9 @@ a[href^="#fnref:"] {
 // Extend paragraphs with `.lead` for larger introductory text.
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 0.5rem;
+  font-weight: 100;
+  color: transparent;
 }
 
 // SVG Icons
